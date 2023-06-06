@@ -18,7 +18,7 @@ export const theme = extendTheme({
     body: "Open sans, sans-serif",
   },
   styles: {
-    globals: () => ({ body: { bg: "gray.200" } }),
+    global: () => ({ body: { bg: "gray.200" } }),
   },
   components: {
     Button,
