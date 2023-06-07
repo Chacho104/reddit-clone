@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useRecoilState } from "recoil";
+import { useRecoilState, useSetRecoilState } from "recoil";
 import {
   Community,
   CommunitySnippet,
@@ -14,11 +14,14 @@ import {
   increment,
   writeBatch,
 } from "firebase/firestore";
+import { authModalState } from "../atoms/authModalAtom";
 
 const useCommunityData = () => {
   const [user] = useAuthState(auth);
   const [communityStateValue, setCommunityStateValue] =
     useRecoilState(communityState);
+
+  const setAuthModalState = useSetRecoilState(authModalState);
 
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
@@ -133,6 +136,12 @@ const useCommunityData = () => {
   ) => {
     // is the user signed in?
     // if not => open auth modal
+
+    if (!user) {
+      //open auth modal
+      setAuthModalState({ open: true, view: "login" });
+      return;
+    }
 
     if (isJoined) {
       leaveCommunity(communityData.id);
