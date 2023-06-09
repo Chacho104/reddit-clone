@@ -17,13 +17,7 @@ import {
   Flex,
   Icon,
 } from "@chakra-ui/react";
-import {
-  doc,
-  getDoc,
-  runTransaction,
-  serverTimestamp,
-  setDoc,
-} from "firebase/firestore";
+import { doc, runTransaction, serverTimestamp } from "firebase/firestore";
 import React, { useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { BsFillEyeFill, BsFillPersonFill } from "react-icons/bs";
@@ -89,7 +83,7 @@ const CreateCommunityModal: React.FC<CreateCommunityModalProps> = ({
 
         transaction.set(communityDocRef, {
           creatorId: user?.uid,
-          createAt: serverTimestamp(),
+          createdAt: serverTimestamp(),
           numberOfMembers: 1,
           privacyType: communityType,
         });
