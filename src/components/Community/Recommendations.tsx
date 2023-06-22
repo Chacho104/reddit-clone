@@ -113,6 +113,7 @@ const Recommendations: React.FC = () => {
                             borderRadius="full"
                             boxSize="28px"
                             mr={2}
+                            alt="Community icon"
                           />
                         ) : (
                           <Icon
