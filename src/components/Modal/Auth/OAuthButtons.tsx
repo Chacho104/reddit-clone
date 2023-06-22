@@ -17,7 +17,12 @@ const OAuthButtons: React.FC = () => {
         isLoading={googleSignInLoading}
         onClick={() => signInWithGoogle()}
       >
-        <Image src="/images/googlelogo.png" height="18px" mr={6} />
+        <Image
+          src="/images/googlelogo.png"
+          height="18px"
+          mr={6}
+          alt="Google logo"
+        />
         Continue with Google
       </Button>
       <Button
@@ -25,7 +30,12 @@ const OAuthButtons: React.FC = () => {
         isLoading={appleSingInoading}
         onClick={() => signInWithApple()}
       >
-        <Image src="/images/applelogo.svg" height="22px" mr={6} />
+        <Image
+          src="/images/applelogo.svg"
+          height="22px"
+          mr={6}
+          alt="Apple logo"
+        />
         Continue with Apple
       </Button>
     </Flex>
