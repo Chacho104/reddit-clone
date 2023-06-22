@@ -136,6 +136,7 @@ const PostItem: React.FC<PostItemProps> = ({
                     borderRadius="full"
                     boxSize="18px"
                     mr={2}
+                    alt="Community icon"
                   />
                 ) : (
                   <Icon as={FaReddit} fontSize="18pt" mr={1} color="blue.500" />
