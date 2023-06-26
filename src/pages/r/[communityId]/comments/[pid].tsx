@@ -1,6 +1,6 @@
 import { Post } from "@/src/atoms/postsAtom";
 import About from "@/src/components/Community/About";
-import PageContent from "@/src/components/Layout/PageContent";
+import PageContent from "@/src/components/layout/PageContent";
 import Comments from "@/src/components/Posts/Comments/Comments";
 import PostItem from "@/src/components/Posts/PostItem";
 import { auth, firestore } from "@/src/firebase/clientApp";

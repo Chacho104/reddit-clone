@@ -1,6 +1,6 @@
 import { communityState } from "@/src/atoms/communitiesAtom";
 import About from "@/src/components/Community/About";
-import PageContent from "@/src/components/Layout/PageContent";
+import PageContent from "@/src/components/layout/PageContent";
 import NewPostForm from "@/src/components/Posts/NewPostForm";
 import { auth } from "@/src/firebase/clientApp";
 import useCommunityData from "@/src/hooks/useCommunityData";

@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import PageContent from "../components/Layout/PageContent";
+import PageContent from "../components/layout/PageContent";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth, firestore } from "../firebase/clientApp";
 import { useEffect, useState } from "react";
